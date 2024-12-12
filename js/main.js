@@ -1,24 +1,26 @@
-// validation form login
-const inputUsername = document.querySelector(".input-login-username");
-const inputPassword = document.querySelector(".input-login-password");
-const btnLogin = document.querySelector(".login__signInButton");
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-// validation form login
+    // Clear previous error messages
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('passwordError').textContent = '';
 
-btnLogin.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (inputUsername.value === "" || inputPassword.value === "") {
-        alert("vui lòng không để trống");
-    } else {
-        const user = JSON.parse(localStorage.getItem(inputUsername.value));
-        if (
-            user.username === inputUsername.value &&
-            user.password === inputPassword.value
-        ) {
-            alert("Đăng Nhập Thành Công");
-            window.location.href = "index.html";
-        } else {
-            alert("Đăng Nhập Thất Bại");
-        }
+    // Validate email
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!email || !emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = 'Vui lòng nhập email hợp lệ.';
+        return;
     }
+
+    // Validate password
+    const password = document.getElementById('password').value;
+    if (!password) {
+        document.getElementById('passwordError').textContent = 'Vui lòng nhập mật khẩu.';
+        return;
+    }
+
+    // Submit form if valid (here you can add AJAX request or redirect to another page)
+    alert('Đăng nhập thành công!');
+    // Form submission or redirection logic
 });
