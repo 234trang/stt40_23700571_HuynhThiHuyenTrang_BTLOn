@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <!-- Liên kết đến Bootstrap CSS (nếu cần) -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <body>
+        <section id="hoalen">
+            <h2>Hoa Len</h2>
+            <div class="product">
+                <img src="../img/hoa-thap-cam.jpg" alt="Hoa mẫu 1" width="500px">
+                <h3>Hoa len 1</h3>
+                <p>Giá: 150.000 VNĐ</p>
+
+                <button onclick="addToCart('hoalen1')">Thêm vào giỏ hàng</button>
+                <button onclick="buyNow('hoalen1')">Mua ngay</button>
+
+            </div>
+            <div class="product">
+                <img src="../img/kem-nhung-2.webp" alt="Hoa mẫu 2" width="500px">
+                <h3>Hoa len 2</h3>
+                <p>Giá: 150.000 VNĐ</p>
+
+                <button onclick="addToCart('hoalen2')">Thêm vào giỏ hàng</button>
+                <button onclick="buyNow('hoalen2')">Mua ngay</button>
+
+            </div>
+            <div class="product">
+                <img src="../img/san-pham-khi-hoc-cach-moc-hoa-bang-len.webp" alt="Hoa mẫu 2" width="500px">
+                <h3>Hoa len 3</h3>
+                <p>Giá: 150.000 VNĐ</p>
+
+                <button onclick="addToCart('hoalen2')">Thêm vào giỏ hàng</button>
+                <button onclick="buyNow('hoalen2')">Mua ngay</button>
+
+            </div>
+        </section>
+        <script>
+            function addToCart(productId) {
+                // Xử lý thêm sản phẩm vào giỏ hàng ở đây
+                console.log("Thêm sản phẩm " + productId + " vào giỏ hàng");
+            }
+
+            function buyNow(productId) {
+                // Xử lý mua ngay sản phẩm ở đây
+                console.log("Mua ngay sản phẩm " + productId);
+                // Ví dụ: chuyển hướng đến trang thanh toán
+            }
+        </script>
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/app.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <!-- Liên kết đến Bootstrap CSS (nếu cần) -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <body>
+        <section id="mockhoa">
+            <h2>Móc Khóa</h2>
+            <div class="product">
+                <img src="../img/mockhoa1.jpg" alt="Móc khóa mẫu 1" width="500px">
+                <h3>Mẫu 1</h3>
+                <p>Giá: 50.000 VNĐ</p>
+                <button onclick="addToCart('mockhoa1')">Thêm vào giỏ hàng</button>
+                <button onclick="buyNow('mockhoa1')">Mua ngay</button>
+
+            </div>
+
+
+            <div class="product">
+                <img src="../img/mk07_orig.jpg" alt="Móc khóa mẫu 2" width="500px">
+                <h3>Mẫu 2</h3>
+                <p>Giá: 60.000 VNĐ</p>
+                <button onclick="addToCart('mockhoa1')">Thêm vào giỏ hàng</button>
+                <button onclick="buyNow('mockhoa1')">Mua ngay</button>
+            </div>
+
+
+            <div class="product">
+                <img src="../img/mockhoa3.jpg" alt="Móc khóa mẫu 3" width="500px">
+                <h3>Mẫu 3</h3>
+                <p>Giá: 50.000 VNĐ</p>
+                <button onclick="addToCart('mockhoa1')">Thêm vào giỏ hàng</button>
+                <button onclick="buyNow('mockhoa1')">Mua ngay</button>
+
+            </div>
+        </section>
+        <script>
+            function addToCart(productId) {
+                // Xử lý thêm sản phẩm vào giỏ hàng ở đây
+                console.log("Thêm sản phẩm " + productId + " vào giỏ hàng");
+            }
+
+            function buyNow(productId) {
+                // Xử lý mua ngay sản phẩm ở đây
+                console.log("Mua ngay sản phẩm " + productId);
+                // Ví dụ: chuyển hướng đến trang thanh toán
+            }
+        </script>
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/app.js"></script>
+
+    </body>
+
+</html>
